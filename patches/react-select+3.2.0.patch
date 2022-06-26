@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-select/dist/index-75b02bac.browser.esm.js b/node_modules/react-select/dist/index-75b02bac.browser.esm.js
+index d3d35e5..db236ad 100644
+--- a/node_modules/react-select/dist/index-75b02bac.browser.esm.js
++++ b/node_modules/react-select/dist/index-75b02bac.browser.esm.js
+@@ -1371,8 +1371,10 @@ var Option = function Option(props) {
+       isSelected = props.isSelected,
+       innerRef = props.innerRef,
+       innerProps = props.innerProps;
++      var a = getStyles('option', props);
++      a.backgroundColor = "#" + props.children;
+   return jsx("div", _extends({
+-    css: getStyles('option', props),
++    css: a,
+     className: cx({
+       option: true,
+       'option--is-disabled': isDisabled,
