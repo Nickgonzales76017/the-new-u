@@ -123,6 +123,26 @@ exports.PostCategory = {
     slug: { type: Slug, from: 'name' },
   },
 };
+exports.NavItem = {
+  fields: {
+    names: { type: Text },
+    slug: { type: Slug, from: 'names' },
+    status: {
+      type: Select,
+      defaultValue: 'draft',
+      options: [
+        { label: 'Draft', value: 'draft' },
+        { label: 'Published', value: 'published' },
+      ],
+    },
+  },
+};
+exports.Blurbs = {
+  fields: {
+    name: { type: Text },
+    text: { type: Select, options: 'Logo, About Header,About Sub-header,About Paragraph' },
+  },
+};
 exports.style_test = {
   fields: {
     name: { type: Text },
